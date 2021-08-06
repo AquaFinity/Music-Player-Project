@@ -1,0 +1,962 @@
+body{
+	font-size: 30px;
+	margin: 0;
+	background-color: #236569;
+	background-image: url(images/fog3.jpg);
+	background-size: 100% 200%;
+}
+/* Header */
+
+header{
+	display: flex;
+	flex-direction: row;
+	height: 7vh;
+	width: 100vw;
+	background-image: linear-gradient(45deg,black,grey);
+	justify-content: space-evenly;
+}
+header>div{
+	display: inline-block;
+}
+#header-image-container{
+	height: inherit;
+	float: right;
+	margin-right: 3%;
+}
+#header-image-container button{
+	height: inherit;
+	width: inherit;
+	background-color: inherit;
+	border: 0px solid transparent;
+}
+#header-image-container img{
+	max-height: 100%;
+	max-width: inherit;
+	border-radius: 50%;
+}
+header>div i{
+	color: white;
+}
+header>div span{
+	color: white;
+	font-size: 1.2rem;
+}
+header form{
+	margin-left: 5px;
+}
+header form input{
+	margin-left: 5px;
+	color: black;
+	background-color: darkgrey;
+	border-radius: 10px 10px 10px 10px;
+}
+header form i{
+	margin-left: -13%;
+	font-size: 0.8rem;
+}
+#logo{
+	width: 20%;
+	height: 100%;
+}
+#logo span{
+	color: white;
+	float: right;
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: bold;
+	font-family: fantasy;
+}
+#logo #noisy{
+	color: red; 
+	margin-right: 2.5%;
+	margin-top: 2%;
+}
+#logo #beam{
+	margin-right: 4%;
+	margin-top: 2%;
+}
+#logo-image{
+	display: inline-block;
+	width: 35%;
+	height: inherit;
+	background-image: url(images/logoimage6.jpg);
+	background-size: 100% 100%;
+	z-index: 5;
+	animation: sizechange 1s ease-in-out infinite alternate;
+}
+#bell:hover{
+	animation: movearound 1s ease-in-out infinite alternate;
+}
+/* Main */
+
+main{
+	margin-top: 0.1%;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+#main-content{
+	display: inline-block;
+	width: 70%;
+}
+
+/* genre */
+
+#genre{
+	display: grid;
+	max-height: 35%;
+	place-items: center;
+}
+.slider{
+	height: 250px;
+	margin: auto;
+	position: relative;
+	width: 90%;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+.slide-track{
+	display: flex;
+	width: calc(250px*8);
+	animation: scroll 40s linear infinite;
+}
+.slide{
+	height: 200px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	perspective: 100px;
+}
+.slide img{
+	height: 100%;
+	width: 100%;
+	transition: transform 1s;
+}
+.slider img:hover{
+	transform: translateZ(20px);
+}
+.slider::before,
+.slider::after{
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	content: '';
+	height: 85%;
+	position: absolute;
+	width: 15%;
+	z-index: 2;
+}
+.slider::before{
+	left: 0;
+	top: 7%;
+}
+.slider::after{
+	right: 0;
+	top: 6%;
+	transform: rotateZ(180deg);
+}
+/* popular albums */
+
+#popular-albums{
+	width: 80%;
+	height: 45%;
+	align-self: center;
+	font-size: 1.2rem;
+	color: white;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+#popular-albums>span a{
+	text-decoration: none;
+	color: white;
+	float: right;
+}
+#popular-albums span:hover{
+	text-decoration: underline;
+}
+#popular-albums span a:hover{
+	text-decoration: underline;
+}
+#album-container{
+	margin-top: 2%;
+	display: flex;
+	flex-wrap: wrap;
+	height: 55%;
+	width: 100%;
+	justify-content: space-around;
+}
+.display-boxtwo{
+	width: 25%;
+	height: 95%;
+}
+#astroworld{
+	background-image: url(images/astroworld.jpg);
+	background-size: 100% 100%;
+}
+#highofflife{
+	background-image: url(images/highofflife.jpg);
+	background-size: 100% 100%;
+}
+#afterhours{
+	background-image: url(images/afterhours.jpg);
+	background-size: 100% 100%;
+}
+.display-boxtwo:hover{
+	height: 100%;
+	box-shadow: 1px 1px 10px 2px lightgrey inset;
+}
+.description-box{
+	display: flex;
+	flex-wrap: wrap;
+	height: 38%;
+	width: 100%;
+	font-size: 0.8rem;
+	justify-content: space-around;
+}
+.display-boxthree{
+	height: inherit;
+	width: 25%;
+	border: 1px solid black;
+	background-image: linear-gradient(45deg,red,cyan);
+	text-align: center;
+	font-weight: 500;
+}
+.album-name{
+	color: black;
+	font-style: oblique;
+}
+.album-description{
+	color: black;
+}
+/* Latest Releases */
+
+#latest-releases{
+	width: 80%;
+	height: 45%;
+	align-self: center;
+	font-size: 1.2rem;
+	color: white;
+	margin-left: 5%;
+}
+#latest-releases>span a{
+	text-decoration: none;
+	color: white;
+	float: right;
+}
+#latest-releases span:hover{
+	text-decoration: underline;
+}
+#latest-releases span a:hover{
+	text-decoration: underline;
+}
+#songs-container{
+	margin-top: 2%;
+	display: flex;
+	flex-wrap: wrap;
+	height: 55%;
+	width: 100%;
+	justify-content: space-around;
+}
+#lemonpepperfreestyle{
+	background-image: url(images/lemonpepperfreestyle.jpg);
+	background-size: 100% 100%;
+}
+#outtheroof{
+	background-image: url(images/outtheroof.jpg);
+	background-size: 100% 100%;
+}
+#masterpiece{
+	background-image: url(images/masterpiece.jpg);
+	background-size: 100% 100%;
+}
+#outtheroof-desc{
+	font-size: 0.61rem;
+}
+
+/* Popular Artists */
+#popular-artists{
+	width: 80%;
+	height: 30%;
+	align-self: center;
+	font-size: 1.2rem;
+	color: white;
+	margin-left: 5%;
+}
+#artist-container{
+	height: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	justify-content: space-between;
+}
+#popular-artists>span a{
+	text-decoration: none;
+	color: white;
+	float: right;
+}
+#popular-artists span:hover{
+	text-decoration: underline;
+}
+.circular-box{
+	height: 75%;
+	width: 15%;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+#TravisScott{
+	background-image: url(images/travis.jpg);
+	background-size: 100% 100%;
+}
+#Weeknd{
+	background-image: url(images/weeknd.jpg);
+	background-size: 100% 100%;
+}
+#Drake{
+	background-image: url(images/drake.jpg);
+	background-size: 100% 100%;
+}
+#BTS{
+	background-image: url(images/BTS.jpg);
+	background-size: 100% 100%;
+}
+#TaylorSwift{
+	background-image: url(images/taylorswift.jpg);
+	background-size: 100% 100%;
+}
+#link-container{
+	display: flex;
+	justify-content: space-between;
+	align-content: flex-end;
+	text-align: center;
+}
+#link-container a{
+	text-decoration: none;
+	color: aquamarine;
+}
+.boxfour{
+	height: inherit;
+	width: 20%;
+}
+.boxfour a:hover{
+	box-shadow: 1px 1px 10px 2px white;
+}
+.circular-box:hover{
+	box-shadow: 1px 1px 10px 2px lightgrey inset;
+}
+.boxfour #travisscott{
+	margin-left: -19%;
+}
+/* Aside Section */
+
+#aside-section{
+	width: 15%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	/*background-color: #01112b;*/
+	background-image: url(images/fog1.jpg);
+	background-size: 100% 100%;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 1%;
+}
+#aside-section span a{
+	text-decoration: none;
+	color: lightgrey;
+	font-size: 0.9rem;
+}
+#aside-section i{
+	color: white;
+	font-size: 1.1rem;
+}
+/* Queue */
+#queue{
+	display: inline-block;
+	width: 29%;
+	height: 200%;
+	background-image: url(images/fog1.jpg);
+	background-size: 100% 50%;
+	color: white;
+	margin-top: 1%;
+}
+#queue-header{
+	display: flex;
+	flex-direction: column;
+	height: 5%;
+	width: 90%;
+	margin-top: 7%;
+	justify-content: flex-start;
+}
+#heading{
+	align-self: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+	width: 30%;
+}
+
+#queue-options{
+	align-self: flex-end;
+	min-height: 100%;
+	margin-top: -10%;
+	margin-right: 0.5%;
+	width: 30%;
+}
+#queue-options{
+	font-size: 1.3rem;
+	color: aquamarine;
+}
+#queue-options i{
+	color: aquamarine;
+	font-size: 0.9rem;
+}
+#hidden{
+	display: none;
+	font-size: 0rem;
+	background-color: white;
+}
+#hidden a{
+	display: block;
+	text-decoration: none;
+	color: grey;
+}
+#imp{
+	border-bottom: 1px solid black;
+}
+#queue-options:hover + #hidden{
+	position: absolute;
+	top: 17%;
+	right: 1.2%;
+	display: block;
+	width: 10%;
+	height: 8%;
+	font-size: 1.1rem;
+}
+#song-container{
+	position: sticky;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	height: 75%;
+	width: 100%;
+}
+.boxfive{
+	display: flex;
+	height: 10%;
+	width: inherit;
+	justify-content: center;
+	align-items: center;
+	margin-left: -2%;
+}
+.boxfive>div{
+	text-align: center;
+	display: inline-block;
+}
+.number{
+	width: 15%;
+	height: 20%;
+	color: grey;
+	font-size: 1.0rem;
+}
+#bar{
+	width: 15%;
+	height: 20%;
+}
+#bar i{
+	color: blue;
+}
+.song-name{
+	width: 25%;
+	height: 65%;
+	flex-grow: 2;
+}
+.heart-icon{
+	margin-left: -2%;
+	width: 15%;
+	height: auto;
+}
+.heart-icon:hover{
+	color: pink;
+}
+.song-image-container{
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+	box-shadow: 1px 1px 10px 2px lightblue;
+}
+.song-image-container img{
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+.song-description{
+	vertical-align: top; 
+	display: inline-block;
+	width: 65%;
+	height: 95%;
+	text-align: left;
+	background-image: linear-gradient(red,cyan);
+	color: black;
+	font-weight: bold;
+}
+.song-description #nameofsong{
+	display: block;
+	margin-top: 0%;
+	font-size: 0.8rem;
+}
+.song-description span{
+	font-size: 0.5rem;
+	text-align: bottom-left;
+}
+.number i{
+	animation: colorchange 1s ease-in-out infinite alternate;
+}
+/* Music Player */
+
+#music-player{
+	display: flex;
+	width: 99.5%;
+	height: 15%;
+	position: fixed;
+	bottom: 0;
+	align-items: center;
+	background-image: linear-gradient(45deg,grey,black);
+	justify-content: space-between;
+}
+#icons i:hover{
+	box-shadow: 1px 1px 10px 2px black;
+}
+.button-container button i:hover{
+	box-shadow: 1px 1px 10px 2px black;
+}
+#song-playing{
+	height: 70%;
+	width: 20%;
+	margin-left: 7%;
+}
+#song-image{
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+	background-image: url(images/driptoohard.jpg);
+	background-size: 100% 100%;
+}
+#song-text{
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: top;
+	font-size: 1.2rem;
+	font-weight: 500;
+	display: inline-block;
+	height: 77%;
+	width: 35.3%;
+	color: white;
+	margin-top: 3%;
+}
+#icons{
+	vertical-align: top;
+	display: inline-block;
+	color: white;
+	margin-left: 2%;
+}
+#song-progress{
+	width: 45%;
+	height: 100%;
+}
+#additional-controls{
+	width: 22%;
+	height: 80%;
+}
+#basic-controls{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 80%;
+	height: 35%;
+	margin: 0 auto;
+}
+.button-container{
+	display: flex;
+	height: 100%;
+	width: 20%;
+	align-items: center;
+	justify-content: center;
+}
+.button-container button{
+	width: 50%;
+	height: 90%;
+	border-radius: 100%;
+	background-color: transparent;
+	border: none;
+}
+.button-container button i{
+	font-size: 1.5rem;
+	color: white;
+}
+#song-played{
+	width: 95%;
+	height: 10%;
+	border: 2px solid black;
+	margin-top: 5%;
+}
+#progress{
+	height: 100%;
+	width: 33%;
+	background-image: linear-gradient(45deg,white,lightblue);
+}
+#circle{
+	border-radius: 50%;
+	background-color: aquamarine;
+	width: 0.8rem;
+	height: 0.8rem;
+	position: relative;
+	left: 32%;
+	bottom: 115%;
+	z-index: 1;
+}
+#additional-container{
+	display: flex;
+	width: 80%;
+	height: 35%;
+	margin: auto;
+	margin-top: 7%;
+	justify-content: space-evenly;
+}
+/* Media Queries and Animations */
+@media screen and (max-width: 1024px){
+	header>div{
+		margin-top: 1.5%;
+	}
+	header>form{
+		margin-top: 1.5%;
+	}
+	#header-image-container button{
+		margin-top: -14%;
+	}
+	#logo #noisy{
+		margin-top: 2.7%;
+	}
+	#logo #beam{
+		margin-top: 2.7%;
+	}
+	#logo #logo-image{
+		margin-top: -5%;
+	}
+	.boxfive{
+		width: 13vw;
+		overflow-wrap: break-word;
+	}
+	.number{
+		font-size: 0.8rem;
+	}
+	#nameofsong{
+		font-size: 0.6rem;
+	}
+	#music-player{
+		font-size: 0.8rem;
+	}
+	#song-progress{
+		font-size: 0.6rem;
+	}
+	#additional-controls{
+		font-size: 0.6rem;
+		margin-right: 11%;
+	}
+}
+@media screen and (max-width: 768px){
+	#circle{
+		position: relative;
+		left: 32%;
+		height: 1.2rem;
+		width: 1rem;
+		bottom: 105%;
+	}
+	#icons{
+		font-size: 1.2rem;
+	}
+	#additional-container{
+		margin-left: -1%;
+	}
+	#queue{
+		margin-left: -5%;
+	}
+	body{
+		font-size: 15px;
+	}
+	#queue-options{
+		font-size: 1rem;
+		width: 45%;
+	}
+	.boxfive{
+		width: 21.9vw;
+	}
+	#genre{
+		height: 20%;
+	}
+	#popular-albums{
+		height: 25%;
+	}
+	.description-box{
+		font-size: 0.5rem;
+		height: 32%;
+	}
+	#latest-releases{
+		height: 25%;
+	}
+	#popular-artists{
+		height: 15%;
+	}
+	header{
+		align-items: center;
+	}
+	#logo>span{
+		font-size: 1.1rem;
+
+	}
+	#logo #beam{
+		margin-top: 15%;
+	}
+	#logo #noisy{
+		margin-top: 15%;
+	}
+	#header-image-container button{
+		margin-top: -3%;
+	}
+}
+@media screen and (max-width: 426px){
+	.description-box{
+		font-size: 0.29rem;
+	}
+	#outtheroof-desc{
+		font-size: 0.25rem;
+	}
+	#popular-albums{
+		font-size: 0.8rem;
+	}
+	#latest-releases{
+		font-size: 0.8rem;
+	}	
+	body{
+		font-size: 20px;
+	}
+	#song-progress{
+		width: 30%;
+	}
+	#additional-container{
+		margin-left: -5%;
+	}
+	#song-text{
+		font-size: 0.8rem;
+	}
+	#icons{
+		font-size: 0.5rem;
+	}
+	#song-progress{
+		width: 40%;
+	}
+	.button-container button i{
+		font-size: 0.6rem;
+	}
+	.boxfour a{
+		font-size: 0.6rem;
+	}
+	#popular-artists>span{
+		font-size: 0.9rem;
+	}
+	#heading span{
+		font-size: 0.7rem;
+	}
+	#queue-options{
+		margin-right: 15%;
+	}
+	#queue-options >span{
+		font-size: 0.5rem;
+	}
+	.boxfive{
+		width: 18vw;
+	}
+	.number{
+		font-size: 0.4rem;
+	}
+	.song-description{
+		height: 95%;
+	}
+	.song-description #nameofsong{
+		font-size: 0.4rem;
+	}
+	.song-description span{
+		font-size: 0.3rem;
+	}
+	.heart-ico i{
+		font-size: 0.2rem;
+	}
+	header{
+		align-items: center;
+	}
+	#logo>span{
+		font-size: 0.65rem;
+	}
+	header>div span{
+		font-size: 0.65rem;
+	}
+	#bell i{
+		font-size: 0.65rem;
+	}
+	header>form{
+		display: inline-block;
+	}
+	#logo #logo-image{
+		margin-top: 1%;
+	}
+	#circle{
+		position: relative;
+		bottom: 150%;
+	}
+}
+@media screen and (max-width: 376px){
+	#website-name i{
+		left: 0.1%;
+	}
+	.description-box{
+		font-size: 0.3rem;
+	}
+	header{
+		justify-content: space-between;
+		align-items: center;
+	}
+	.boxfive{
+		width: 22.5vw;
+		height: 14.5vh;
+	}
+	#logo>span{
+		font-size: 0.5rem;
+	}
+	header>div{
+		margin-top: 1%;
+		font-size: 0.4rem;
+		margin-left: 1%;
+	}
+	header>form{
+		margin-bottom: 2%;
+		width: 45%;
+	}
+	#bell{
+		font-size: 0.5rem;
+	}
+	#circle{
+		position: relative;
+		bottom: 145%;
+	}
+	.song-description #nameofsong{
+		font-size: 0.4rem;
+	}
+	#queue-options{
+		margin-right: 5%;
+	}
+}
+@media screen and (max-width: 321px){
+	.description-box{
+		font-size: 0.3rem;
+	}
+	header{
+		align-items: center;
+	}
+	#logo>span{
+		font-size: 0.4rem;
+	}
+	#logo #beam{
+		margin-top: 23%;
+	}
+	#logo #noisy{
+		margin-top: 23%;
+	}
+	header>div span{
+		font-size: 0.4rem;
+	}
+	#bell{
+		font-size: 0.4rem;
+	}
+	header>form i{
+		font-size: 0.4rem;
+	}
+	header>form input{
+		width: 85%;
+	}
+	#header-image-container{
+		margin-right: 8%;
+	}
+	.boxfive{
+		width: 22vw;
+		height: 17vh;
+	}
+	.song-description #nameofsong{
+		font-size: 0.4rem;
+	}
+	.song-description span{
+		font-size: 0.2rem;
+	}
+	.song-description{
+		height: 100%;
+	}
+	.heart-icon{
+		font-size: 0.5rem;
+	}
+}
+@keyframes blinking{
+	0%{
+		color: #ffd23d;
+		transform: scaleX(1.1);
+	}
+	100%{
+		color: #acd622;
+		transform: scaleX(1.0);
+	}
+}
+@keyframes colorchange{
+	0%{
+		background-color: pink;
+	}
+	100%{
+		background-color: lightgreen;
+	}
+}
+@keyframes sizechange{
+	0%{
+		transform: scale(1.5); 
+	}
+	100%{
+		transform: scale(1.0);
+	}
+}
+@keyframes movearound{
+	0%{
+		transform: rotate(45deg);
+	}
+	100%{
+		transform: rotate(-45deg);
+	}
+}
+@keyframes scroll{
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(calc(-250px*4));
+	}
+}
+/* Handle on hover */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}

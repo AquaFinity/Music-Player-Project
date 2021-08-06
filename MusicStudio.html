@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MusicStudio</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="font-awesome-animation.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<div id="logo-image">
+
+			</div>
+			<span id="beam">Beam</span>
+			<span id="noisy">Noisy</span>
+		</div>
+		<div>
+			<span>
+				Favourites
+			</span>
+		</div>
+		<div id="bell">
+			<i class="fas fa-bell"></i>
+		</div>
+		<form>
+			<input type="text" placeholder="Search">
+			<i class="fas fa-microphone"></i>
+		</form>
+		<div id="header-image-container">
+			<button>
+				<img src="https://media-exp1.licdn.com/dms/image/C4E03AQHXHYtlIhfH3A/profile-displayphoto-shrink_100_100/0/1611826857008?e=1621468800&v=beta&t=3-wbOPwExsVjMwP6w-dp1Ld3TQMoz6zcAwaNcVPg0iQ">
+			</button>
+		</div>
+	</header>
+	<main>
+		<div id="aside-section">
+			<div id="create-playlist">
+				<span><i class="fas fa-plus"></i></span>
+				<span><a href="">Create Playlist</a></span>
+			</div>
+			<div >
+				<span><i class="fas fa-heart"></i></span>
+				<span><a href="">Liked Songs</a></span>
+			</div>
+			<div>
+				<span><i class="fas fa-ellipsis-h"></i></span>
+				<span><a href="">Current Playlists</a></span>
+			</div>
+		</div>
+		<div id="main-content">
+			<div id="genre">
+				<div class="slider">
+					<div class="slide-track">
+						<div class="slide">
+							<img src="images/party.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/country.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/classical.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/rock.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/party.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/country.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/classical.jpg">
+						</div>
+						<div class="slide">
+							<img src="images/rock.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="popular-albums">
+				<span>
+					Popular Albums
+				</span>
+				<span>
+					<a href="">See All...</a>
+				</span>
+				<div id="album-container">
+					<div id="astroworld" class="display-boxtwo">
+						<a href="_blank"></a>
+					</div>
+					<div id="highofflife" class="display-boxtwo"> 
+						<a href="_blank"></a>
+					</div>
+					<div id="afterhours" class="display-boxtwo">
+						<a href="_blank"></a>
+					</div>
+				</div>
+				<div class="description-box">
+					<div id="astroworld-description" class="display-boxthree">
+						<span class="album-name">ASTROWORLD</span>
+						<br>
+						<span class="album-description">Studio album by Travis Scott</span>
+					</div>
+					<div id="highofflife-description" class="display-boxthree">
+						<span class="album-name">HIGH OFF LIFE</span>
+						<br>
+						<span class="album-description">Studio album by Future</span>
+					</div>
+					<div id="afterhours-description" class="display-boxthree">
+						<span class="album-name">AFTER HOURS</span>
+						<br>
+						<span class="album-description">Studio album by The Weeknd</span>
+					</div>
+				</div>
+			</div>
+			<div id="latest-releases">
+				<span>
+					Latest Releases
+				</span>
+				<span>
+					<a href="">See All...</a>
+				</span>
+				<div id="songs-container">
+					<div id="lemonpepperfreestyle" class="display-boxtwo">
+
+					</div>
+					<div id="outtheroof" class="display-boxtwo">
+					</div>
+					<div id="masterpiece" class="display-boxtwo">
+
+					</div>
+				</div>
+				<div class="description-box">
+					<div id="lemmonpepperfreestyle-desc" class="display-boxthree">
+						<span class="album-name">Artists: Drake, Rick Ross</span>
+						<br>
+						<span class="album-description">Lemon Pepper Freestyle</span>
+					</div>
+					<div id="outtheroof-desc" class="display-boxthree">
+						<span class="album-name">Artists: Booka 600, Lil Durk, King Von</span>
+						<br>
+						<span class="album-description">Loyal Bros</span>
+					</div>
+					<div id="masterpiece-desc" class="display-boxthree">
+						<span class="album-name">Artist: DaBaby</span>
+						<br>
+						<span class="album-description">Masterpiece</span>
+					</div>
+				</div>
+			</div>
+			<div id="popular-artists">
+				<span>
+					Popular Artists
+				</span>
+				<div id="artist-container">
+					<div id="TravisScott" class="circular-box">
+					</div>
+					<div id="Weeknd" class="circular-box">
+					</div>
+					<div id="Drake" class="circular-box">
+					</div>
+					<div id="BTS" class="circular-box">
+					</div>
+					<div id="TaylorSwift" class="circular-box">
+					</div>
+				</div>
+				<div id="link-container">
+					<div class="boxfour">
+						<a href="html/TravisScott.html" id="travisscott">Travis Scott</a>
+					</div>
+					<div class="boxfour">
+						<a href="html/Weeknd.html">Weeknd</a>
+					</div>
+					<div class="boxfour">
+						<a href="html/Drake.html">Drake</a>
+					</div>
+					<div class="boxfour">
+						<a href="html/BTS.html">BTS</a>
+					</div>
+					<div class="boxfour">
+						<a href="html/TaylorSwift.html">Taylor Swift</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="queue">
+			<div id="queue-header">
+				<div id="heading">
+					<span>Queue</span>
+				</div>
+				<div id="queue-options">
+					<span>Queue</span>
+					<span><a href="#hidden"><i class="fas fa-arrow-down"></i></a></span>
+				</div>
+				<div id="hidden">
+					<a href="" id="imp">Playlist</a>
+					<a href="">Favourite Songs</a>
+				</div>
+			</div>
+			<div id="song-container">
+				<div class="boxfive">
+					<div class="number">
+						01
+					</div>
+					<div class="song-name">
+						<div class="song-image-container">
+							<img src="images/astroworld.jpg">
+						</div>
+						<div class="song-description">
+							<span id="nameofsong">
+								STARGAZING
+							</span>
+							<span>
+								Travis Scott
+							</span>
+						</div>
+					</div>
+					<div class="heart-icon">
+						<i class="far fa-heart"></i>
+					</div>
+				</div>
+				<div class="boxfive">
+					<div class="number">
+						<i class="fas fa-play-circle"></i>
+					</div>
+					<div class="song-name">
+						<div class="song-image-container">
+							<img src="images/chanel.jpg">
+						</div>
+						<div class="song-description">
+							<span id="nameofsong">
+								Chanel Gon Get It
+							</span>
+							<span>
+								Young Thug, Gunna, Lil Baby
+							</span>
+						</div>
+					</div>
+					<div class="heart-icon">
+						<i class="far fa-heart"></i>
+					</div>
+				</div>
+				<div class="boxfive">
+					<div class="number">
+					 	03
+					</div>
+					<div class="song-name">
+						<div class="song-image-container">
+							<img src="images/darkknightdummo.jpg">
+						</div>
+						<div class="song-description">
+							<span id="nameofsong">
+								Dark Knight Dummo
+							</span>
+							<span>
+								Trippie Redd
+							</span>
+						</div>
+					</div>
+					<div class="heart-icon">
+						<i class="far fa-heart"></i>
+					</div>
+				</div>
+				<div class="boxfive">
+					<div class="number">
+					 	04
+					</div>
+					<div class="song-name">
+						<div class="song-image-container">
+							<img src="images/ricflairdrip.jpg">
+						</div>
+						<div class="song-description">
+							<span id="nameofsong">
+								Ric Flair Drip
+							</span>
+							<span>
+								Offset
+							</span>
+						</div>
+					</div>
+					<div class="heart-icon">
+						<i class="far fa-heart"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="music-player">
+			<div id="song-playing">
+				<div id="song-image">
+				</div>
+				<div id="song-text">
+					<span>Drip Too Hard</span>
+					<br>
+				    <span style="font-size: 0.7rem">Gunna and Lil Baby</span>
+				</div>
+				<div id="icons">
+					<i class="far fa-heart"></i>
+					<i class="fas fa-ban"></i>
+				</div>
+			</div>
+			<div id="song-progress">
+				<div id="basic-controls">
+					<div class="button-container">
+						<button>
+							<i class="fas fa-random"></i>
+						</button>
+					</div>
+					<div class="button-container">
+						<button>
+							<i class="fas fa-fast-backward"></i>
+						</button>
+					</div>
+					<div class="button-container">
+						<button>
+							<i class="fas fa-pause-circle"></i>
+						</button>
+					</div>
+					<div class="button-container">
+						<button>
+							<i class="fas fa-fast-forward"></i>
+						</button>
+					</div>
+					<div class="button-container">
+						<button>
+							<i class="fas fa-redo-alt"></i>
+						</button>
+					</div>
+				</div>
+				<div id="song-played">
+					<div id="progress">
+					</div>
+					<div id="circle">
+					</div>
+				</div>
+			</div>
+			<div id="additional-controls">
+				<div id="additional-container">
+					<div class="button-container">
+						<button><i class="fas fa-bars"></i></button>
+					</div>
+					<div class="button-container">
+						<button><i class="fas fa-desktop"></i></button>
+					</div>
+					<div class="button-container">
+						<button id="sound"><i class="fas fa-volume-up"></i></button>
+					</div>
+					<div class="button-container">
+						<button><i class="fas fa-expand-arrows-alt"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

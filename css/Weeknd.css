@@ -1,0 +1,776 @@
+body{
+	font-size: 30px;
+	margin: 0;
+	background-color: #236569;
+	background-image: url(../images/fog3.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/* Header */
+
+header{
+	display: flex;
+	flex-direction: row;
+	height: 7vh;
+	width: 100vw;
+	background-image: linear-gradient(45deg,black,grey);
+	justify-content: space-evenly;
+	align-items: center;
+}
+header>div{
+	display: inline-block;
+}
+#header-image-container{
+	height: inherit;
+	float: right;
+	margin-right: 3%;
+}
+#header-image-container button{
+	height: inherit;
+	width: inherit;
+	background-color: inherit;
+	border: 0px solid transparent;
+}
+#header-image-container img{
+	max-height: 100%;
+	max-width: inherit;
+	border-radius: 50%;
+}
+header>div i{
+	color: white;
+}
+header>div span{
+	color: white;
+	font-size: 1.2rem;
+}
+header form{
+	margin-left: 5px;
+}
+header form input{
+	margin-left: 5px;
+	color: black;
+	background-color: darkgrey;
+	border-radius: 10px 10px 10px 10px;
+}
+header form i{
+	margin-left: -13%;
+	font-size: 0.8rem;
+}
+#logo{
+	width: 20%;
+	height: 100%;
+}
+#logo span{
+	color: white;
+	float: right;
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: bold;
+	font-family: fantasy;
+}
+#logo #noisy{
+	color: red; 
+	margin-right: 2.5%;
+	margin-top: 2%;
+}
+#logo #beam{
+	margin-right: 4%;
+	margin-top: 2%;
+}
+#logo-image{
+	display: inline-block;
+	width: 35%;
+	height: inherit;
+	background-image: url(../images/logoimage6.jpg);
+	background-size: 100% 100%;
+	z-index: 5;
+	animation: sizechange 1s ease-in-out infinite alternate;
+}
+#bell:hover{
+	animation: movearound 1s ease-in-out infinite alternate;
+}
+/* Main Content */ 
+
+
+main{
+	display: flex;
+	height: 200vh;
+	width: 100vw;
+}
+#main-content{
+	display: flex;
+	flex-direction: column;
+	width: 62%;
+	padding: 0;
+}
+
+/* Artist Description */
+
+#artist-description{
+	display: flex;
+	margin-top: 5%;
+	margin-left: 15%;
+	height: 39%;
+	width: 75%;
+}
+#artist-image{
+	width: 35%;
+	height: 50%;
+	background-image: url(../images/theweeknd.jpg);
+	background-size: 100% 100%;
+	box-shadow: 1px 1px 10px 2px lightgrey inset;
+	opacity: 0.8;
+}
+#about-artist{
+	color: white;
+	height: 50%;
+	width: 65%;
+	background-color: #db5c53;
+}
+#artist-name{
+	position: absolute;
+	top: 18%;
+	left: 26.5%;
+}
+#followers{
+	position: absolute;
+	top: 20%;
+	right: 47%;
+	font-size: 0.8rem;
+	color: lightgrey;
+}
+#job{
+	color: lightgrey;
+	position: absolute;
+	top: 25%;
+	left: 26.5%;
+	font-size: 0.6rem;
+}
+#about-artist p{
+	position: absolute;
+	top: 26.6%;
+	left: 26.5%;
+	width: 25%;
+	font-size: 0.7rem;
+	float: center;
+	color: lightgrey;
+}
+#play-all{
+	position: absolute;
+	top: 45%;
+	left: 26.5%;
+	width: 10%;
+	height: 5.5%;
+	background-image: linear-gradient(45deg,red,cyan);
+}
+#follow{
+	position: absolute;
+	top: 45%;
+	left: 39%;
+	background-color: inherit;
+	border: none;
+	color: white;
+	text-align: center;
+}
+/* all-songs */
+
+#all-songs{
+	display: flex;
+	flex-direction: column;
+	height: 61%;
+	width: 75%;
+	margin-left: 15%;
+	margin-top: -25%;
+}
+.boxone{
+	display: flex;
+	align-items: center;
+	height: 7%;
+	width: 100%;
+	margin-bottom: 5px;
+	background-color: #1f5378;
+}
+.boxone:hover{
+	box-shadow: 1px 1px 10px 2px black;
+}
+.number{
+	font-size: 0.8rem;
+	margin-left: 2%;
+	color: grey;
+}
+.simage-container{
+	height: 80%;
+	width: 8.9%;
+	margin-left: 3%;
+	z-index: 2;
+}
+.simage-container img{
+	max-width: 100%;
+	max-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+.desc{
+	width: 30%;
+	margin-left: 3%;
+	font-size: 0.7rem;
+	color: white;
+}
+.desc span{
+	font-size: 0.5rem;
+	color: grey;
+}
+.desc span:hover{
+	text-decoration: underline;
+}
+.number i{
+	animation: colorchange 1s ease-in-out infinite alternate;
+}
+.icons{
+	margin-left: 35%;
+	font-size: 0.8rem;
+	color: white;
+}
+
+/* Aside Section */
+
+#aside-section{
+	width: 40%;
+	margin-top: 3%;
+	margin-right: 2.5%;
+}
+#similar-artists h5{
+	color: white;
+	font-weight: 500;
+}
+#recently-played h5{
+	margin-top: 15%;
+	color: white;
+	font-weight: 500;
+}
+#recently-played h5 span{
+	color: lightgrey;
+	float: right;
+	font-size: 0.8rem;
+	margin-right: 20%;
+	margin-top: 2.5%; 
+}
+#similar-artists h5 span{
+	color: lightgrey;
+	float: right;
+	font-size: 0.8rem;
+	margin-right: 20%;
+	margin-top: 2.5%; 
+}
+#other-artists{
+	display: flex;
+	flex-direction: column;
+	height: 18%;
+	width: 90%;
+}
+.boxtwo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: inherit;
+	height: 33.3%;
+	margin-bottom: 4%;
+	background-image: linear-gradient(red,cyan);
+}
+.boxtwo>div{
+	text-align: center;
+	display: inline-block;
+}
+.boxtwo a{
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: black;
+	margin-bottom: 5%;
+}
+.oimage-container{
+	height: 100%;
+	width: 20%;
+}
+#young-thug{
+	background-image: url(../images/youngthug.jpg);
+	background-size: 100% 100%;
+}
+#jcole{
+	background-image: url(../images/jcole.jpg);
+	background-size: 100% 100%;
+}
+#edsheeran{
+	background-image: url(../images/edsheeran.jpg);
+	background-size: 100% 100%;
+}
+.oartist-text a{
+	font-size: 1.4rem;
+}
+.oartist-text span{
+	color: black;
+	font-size: 0.8rem;
+}
+.boxtwo>i{
+	font-size: 1.2rem;
+	margin-right: 5%;
+	align-self: flex-start;
+	color: black;
+}
+#recent-songs{
+	display: flex;
+	flex-direction: column;
+	height: 28%;
+	width: 80%;
+}
+.boxthree{
+	display: flex;
+	height: 20%;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	background-image: linear-gradient(red,cyan);
+	color: black
+}
+.boxthree .oartist-text span{
+	color: black;
+}
+.boxthree>div{
+	text-align: center;
+	display: inline-block;
+}
+.boxthree a{
+	color: black;
+	text-decoration: none;
+	font-size: 0.8rem;
+	margin-bottom: 5%;
+}
+#stargazing{
+	background-image: url(../images/astroworld.jpg);
+	background-size: 100% 100%;
+}
+.boxthree .oartist-text{
+	margin-left: -29%;
+	margin-bottom: 2%;
+}
+.boxthree>i{
+	margin-right: 5%;
+} 
+#solitaires{
+	background-image: url(../images/highofflife.jpg);
+	background-size: 100% 100%;
+}
+#dkd{
+	background-image: url(../images/darkknightdummo.jpg);
+	background-size: 100% 100%;
+}
+#masterpiece{
+	background-image: url(../images/masterpiece.jpg);
+	background-size: 100% 100%;
+}
+#chanel{
+	background-image: url(../images/chanel.jpg);
+	background-size: 100% 100%;
+}
+/* Music Player */
+#music-player{
+	display: flex;
+	width: 99.5%;
+	height: 15%;
+	position: fixed;
+	bottom: 0;
+	align-items: center;
+	background-image: linear-gradient(45deg,grey,black);
+	justify-content: space-between;
+	z-index: 2;
+}
+
+#song-playing{
+	height: 70%;
+	width: 20%;
+	margin-left: 7%;
+}
+#song-image{
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+	background-image: url(../images/starboy.jpg);
+	background-size: 100% 100%;
+}
+#song-text{
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: top;
+	font-size: 1.2rem;
+	font-weight: 500;
+	display: inline-block;
+	height: 77%;
+	width: 35.3%;
+	color: white;
+	margin-top: 3%;
+}
+#icons{
+	vertical-align: top;
+	display: inline-block;
+	color: white;
+	margin-left: 2%;
+}
+#icons i:hover{
+	box-shadow: 1px 1px 10px 2px black;
+}
+#song-progress{
+	width: 45%;
+	height: 100%;
+}
+#additional-controls{
+	width: 22%;
+	height: 80%;
+}
+#basic-controls{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 80%;
+	height: 35%;
+	margin: 0 auto;
+}
+.button-container{
+	display: flex;
+	height: 100%;
+	width: 20%;
+	align-items: center;
+	justify-content: center;
+}
+.button-container button{
+	width: 50%;
+	height: 90%;
+	border-radius: 100%;
+	background-color: transparent;
+	border: none;
+}
+.button-container button i{
+	font-size: 1.5rem;
+	color: white;
+}
+.button-container button i:hover{
+	box-shadow: 1px 1px 10px 2px black;
+}
+#song-played{
+	width: 95%;
+	height: 10%;
+	border: 2px solid black;
+	margin-top: 5%;
+}
+#progress{
+	height: 100%;
+	width: 33%;
+	background-image: linear-gradient(45deg,white,lightblue);
+}
+#circle{
+	border-radius: 50%;
+	background-color: aquamarine;
+	width: 0.8rem;
+	height: 0.8rem;
+	position: relative;
+	left: 32%;
+	bottom: 115%;
+	z-index: 1;
+}
+#additional-container{
+	display: flex;
+	width: 80%;
+	height: 35%;
+	margin: auto;
+	margin-top: 7%;
+	justify-content: space-evenly;
+}
+
+/* Media Queries and Animations */
+@media screen and (max-width: 1024px){
+	#logo #noisy{
+		margin-top: 13%;
+	}
+	#logo #beam{
+		margin-top: 13%;
+	}
+	#all-songs{
+		margin-top: -65%;
+	}
+	#job{
+		font-size: 0.8rem;
+	}
+	#play-all{
+		position: absolute;
+		top: 42%;
+	}
+	#additional-container{
+		margin-left: -2%;
+	}
+	#circle{
+		bottom: 102%;
+	}
+}
+@media screen and (max-width: 768px){
+	#logo #noisy{
+		margin-top: 19%;
+		font-size: 1.0rem;
+	}
+	#logo #beam{
+		margin-top: 19%;
+		font-size: 1.0rem;
+	}
+	#artist-name{
+		font-size: 1.5rem;
+	}
+	#followers{
+		top: 19%;
+	}
+	#about-artist p{
+		font-size: 0.8rem;
+	}
+	#all-songs{
+		margin-top: -80%;
+	}
+	.boxthree .oartist-text{
+		margin-left: -1.5%;
+	}
+	#icons>i{
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 426px){
+	#logo{
+		margin-left: 5.5%;
+	}
+	#logo #noisy{
+		font-size: 0.6rem;
+	}
+	#logo #beam{
+		font-size: 0.6rem;
+	}
+	header>div span{
+		margin-left: 2%;
+		margin-bottom: 3%;
+		font-size: 0.5rem;
+	}
+	#bell{
+		margin-top: 2%;
+		margin-left: 2%;
+		font-size: 0.6rem;
+	}
+	#artist-name{
+		font-size: 0.8rem;
+	}
+	#followers{
+		font-size: 0.5rem;
+		top: 18.5%;
+	}
+	#job{
+		font-size: 0.4rem;
+	}
+	#about-artist p{
+		font-size: 0.4rem;
+	}
+	#play-all{
+		font-size: 0.5rem;
+	}
+	#follow{
+		font-size: 0.6rem;
+		top: 43%;
+	}
+	.number{
+		font-size: 0.6rem;
+	}
+	.desc{
+		font-size: 0.4rem;
+		overflow-wrap: break-word;
+	}
+	.desc span{
+		font-size: 0.3rem;
+	}
+	.icons{
+		font-size: 0.3rem;
+	}
+	.oartist-text a{
+		font-size: 0.8rem;
+	}
+	#similar-artists h5{
+		font-size: 1rem;
+	}
+	#recently-played h5{
+		font-size: 1rem;
+	}
+	.boxthree .oartist-text{
+		margin-bottom: 10%;
+		margin-top: 13%;
+	}
+	.boxthree .oartist-text a{
+		font-size: 0.6rem;
+	}
+	.oartist-text span{
+		font-size: 0.6rem;
+	}
+	#dkdd .oartist-text{
+		font-size: 0.5rem;
+		margin-top: 15%;
+		padding: 2%;
+	}
+	.boxthree i{
+		font-size: 0.8rem;
+	}
+	#song-text{
+		font-size: 0.8rem;
+	}
+	#icons>i{
+		font-size: 0.5rem;
+	}
+	body{
+		font-size: 20px;
+	}
+	.button-container button i{
+		font-size: 0.8rem;
+	}
+}
+@media screen and (max-width: 376px){
+	body{
+		font-size: 15px;
+	}
+	#additional-container{
+		margin-left: -13%;
+	}
+	header>form input{
+		width: 80%;
+	}
+	#logo{
+		margin-left: 12%;
+	}
+	#logo #beam{
+		margin-right: 7%;
+		margin-top: 25%;
+		font-size: 0.4rem;
+	}
+	#logo #noisy{
+		margin-top: 25%;
+		font-size: 0.4rem;
+	}
+	header>div span{
+		margin-left: 2%;
+		font-size: 0.4rem;
+	}
+	#artist-name{
+		font-size: 0.6rem;
+	}
+	#followers{
+		font-size: 0.5rem;
+	}
+	#job{
+		top: 23%;
+	}
+	#about-artist p{
+		top: 25%;
+	}
+	#recent-songs .boxthree .oartist-text span{
+		font-size: 0.4rem;
+	}
+	.boxtwo i{
+		font-size: 0.6rem;
+	}
+}
+@media screen and (max-width: 326px){
+	body{
+		font-size: 10px;
+	}
+	#followers{
+		font-size: 0.4rem;
+		top: 15.5%;
+	}
+	#artist-name{
+		top: 15%;
+	}
+	#job{
+		top: 20%;
+	}
+	#about-artist p{
+		top: 23%;
+	}
+	#play-all{
+		top: 40%;
+	}
+	#follow{
+		top: 42%;
+	}
+	.button-container button i{
+		font-size: 0.4rem;
+	}
+	#additional-container{
+		margin-left: -25%;
+	}
+	#similar-artists h5{
+		font-size: 0.9rem;
+	}
+	#recently-played h5{
+		font-size: 0.9rem;
+	}
+	header>form input{
+		width: 60%;
+	}
+	#logo{
+		margin-left: 16%;
+	}
+	#logo #noisy{
+		margin-top: 38%;
+		font-size: 0.25rem;
+	}
+	#logo #beam{
+		margin-top: 38%;
+		font-size: 0.25rem;
+	}
+	header>div span{
+		margin-left: 5%;
+		font-size: 0.3rem;
+	}
+	#bell{
+		font-size: 0.4rem;
+	}
+}
+
+@keyframes colorchange{
+	0%{
+		background-color: pink;
+	}
+	100%{
+		background-color: lightgreen;
+	}
+}
+@keyframes sizechange{
+	0%{
+		transform: scale(1.5); 
+	}
+	100%{
+		transform: scale(1.0);
+	}
+}
+@keyframes movearound{
+	0%{
+		transform: rotate(45deg);
+	}
+	100%{
+		transform: rotate(-45deg);
+	}
+}
+/* Handle on hover */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
