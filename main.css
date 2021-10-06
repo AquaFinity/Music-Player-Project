@@ -692,6 +692,7 @@ main{
 	}
 	#genre{
 		height: 20%;
+		overflow: hidden;
 	}
 	#popular-albums{
 		height: 25%;
